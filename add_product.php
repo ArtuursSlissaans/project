@@ -27,7 +27,7 @@ if(isset($_POST['add'])){
    if($image_size > 2000000){
       $warning_msg[] = 'Image size is too large!';
    }else{
-      $add_product = $conn->prepare("INSERT INTO `products`(id, name, price, image) VALUES(?,?,?,?)");
+      $add_product = $conn->prepare("INSERT INTO `product`(id, name, price, image) VALUES(?,?,?,?)");
       $add_product->execute([$id, $name, $price, $rename]);
       move_uploaded_file($image_tmp_name, $image_folder);
       $success_msg[] = 'Product added!';

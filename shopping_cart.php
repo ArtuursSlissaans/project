@@ -15,7 +15,7 @@ if(isset($_POST['update_cart'])){
    $qty = $_POST['qty'];
    $qty = filter_var($qty, FILTER_SANITIZE_STRING);
 
-   $update_qty = $conn->prepare("UPDATE `cart` SET qty = ? WHERE id = ?");
+   $update_qty = $conn->prepare("UPDATE `carts` SET qty = ? WHERE id = ?");
    $update_qty->execute([$qty, $cart_id]);
 
    $success_msg[] = 'Cart quantity updated!';
@@ -27,11 +27,11 @@ if(isset($_POST['delete_item'])){
    $cart_id = $_POST['cart_id'];
    $cart_id = filter_var($cart_id, FILTER_SANITIZE_STRING);
    
-   $verify_delete_item = $conn->prepare("SELECT * FROM `cart` WHERE id = ?");
+   $verify_delete_item = $conn->prepare("SELECT * FROM `carts` WHERE id = ?");
    $verify_delete_item->execute([$cart_id]);
 
    if($verify_delete_item->rowCount() > 0){
-      $delete_cart_id = $conn->prepare("DELETE FROM `cart` WHERE id = ?");
+      $delete_cart_id = $conn->prepare("DELETE FROM `carts` WHERE id = ?");
       $delete_cart_id->execute([$cart_id]);
       $success_msg[] = 'Cart item deleted!';
    }else{
@@ -42,11 +42,11 @@ if(isset($_POST['delete_item'])){
 
 if(isset($_POST['empty_cart'])){
    
-   $verify_empty_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+   $verify_empty_cart = $conn->prepare("SELECT * FROM `carts` WHERE user_id = ?");
    $verify_empty_cart->execute([$user_id]);
 
    if($verify_empty_cart->rowCount() > 0){
-      $delete_cart_id = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
+      $delete_cart_id = $conn->prepare("DELETE FROM `carts` WHERE user_id = ?");
       $delete_cart_id->execute([$user_id]);
       $success_msg[] = 'Cart emptied!';
    }else{
@@ -82,12 +82,12 @@ if(isset($_POST['empty_cart'])){
 
    <?php
       $grand_total = 0;
-      $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+      $select_cart = $conn->prepare("SELECT * FROM `carts` WHERE user_id = ?");
       $select_cart->execute([$user_id]);
       if($select_cart->rowCount() > 0){
          while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
 
-         $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+         $select_products = $conn->prepare("SELECT * FROM `product` WHERE id = ?");
          $select_products->execute([$fetch_cart['product_id']]);
          if($select_products->rowCount() > 0){
             $fetch_product = $select_products->fetch(PDO::FETCH_ASSOC);

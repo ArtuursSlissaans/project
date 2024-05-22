@@ -8,7 +8,7 @@
          <a href="view_products.php">view products</a>
          <a href="orders.php">my orders</a>
          <?php
-            $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+            $count_cart_items = $conn->prepare("SELECT * FROM `carts` WHERE user_id = ?");
             $count_cart_items->execute([$user_id]);
             $total_cart_items = $count_cart_items->rowCount();
          ?>

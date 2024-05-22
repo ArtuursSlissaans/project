@@ -34,11 +34,11 @@ if(isset($_COOKIE['user_id'])){
    <div class="box-container">
 
    <?php
-      $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ? ORDER BY date DESC");
+      $select_orders = $conn->prepare("SELECT * FROM `orderss` WHERE user_id = ? ORDER BY date DESC");
       $select_orders->execute([$user_id]);
       if($select_orders->rowCount() > 0){
          while($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)){
-            $select_product = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+            $select_product = $conn->prepare("SELECT * FROM `product` WHERE id = ?");
             $select_product->execute([$fetch_order['product_id']]);
             if($select_product->rowCount() > 0){
                while($fetch_product = $select_product->fetch(PDO::FETCH_ASSOC)){

@@ -16,10 +16,10 @@ if(isset($_POST['add_to_cart'])){
    $qty = $_POST['qty'];
    $qty = filter_var($qty, FILTER_SANITIZE_STRING);
    
-   $verify_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ? AND product_id = ?");   
+   $verify_cart = $conn->prepare("SELECT * FROM `carts` WHERE user_id = ? AND product_id = ?");   
    $verify_cart->execute([$user_id, $product_id]);
 
-   $max_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+   $max_cart_items = $conn->prepare("SELECT * FROM `carts` WHERE user_id = ?");
    $max_cart_items->execute([$user_id]);
 
    if($verify_cart->rowCount() > 0){
@@ -28,11 +28,11 @@ if(isset($_POST['add_to_cart'])){
       $warning_msg[] = 'Cart is full!';
    }else{
 
-      $select_price = $conn->prepare("SELECT * FROM `products` WHERE id = ? LIMIT 1");
+      $select_price = $conn->prepare("SELECT * FROM `product` WHERE id = ? LIMIT 1");
       $select_price->execute([$product_id]);
       $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
-      $insert_cart = $conn->prepare("INSERT INTO `cart`(id, user_id, product_id, price, qty) VALUES(?,?,?,?,?)");
+      $insert_cart = $conn->prepare("INSERT INTO `carts`(id, user_id, product_id, price, qty) VALUES(?,?,?,?,?)");
       $insert_cart->execute([$id, $user_id, $product_id, $fetch_price['price'], $qty]);
       $success_msg[] = 'Added to cart!';
    }
@@ -65,7 +65,7 @@ if(isset($_POST['add_to_cart'])){
    <div class="box-container">
 
    <?php 
-      $select_products = $conn->prepare("SELECT * FROM `products`");
+      $select_products = $conn->prepare("SELECT * FROM `product`");
       $select_products->execute();
       if($select_products->rowCount() > 0){
          while($fetch_prodcut = $select_products->fetch(PDO::FETCH_ASSOC)){

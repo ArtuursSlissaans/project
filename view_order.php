@@ -17,7 +17,7 @@ if(isset($_GET['get_id'])){
 
 if(isset($_POST['cancel'])){
 
-   $update_orders = $conn->prepare("UPDATE `orders` SET status = ? WHERE id = ?");
+   $update_orders = $conn->prepare("UPDATE `orderss` SET status = ? WHERE id = ?");
    $update_orders->execute(['canceled', $get_id]);
    header('location:orders.php');
 
@@ -50,11 +50,11 @@ if(isset($_POST['cancel'])){
 
    <?php
       $grand_total = 0;
-      $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE id = ? LIMIT 1");
+      $select_orders = $conn->prepare("SELECT * FROM `orderss` WHERE id = ? LIMIT 1");
       $select_orders->execute([$get_id]);
       if($select_orders->rowCount() > 0){
          while($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)){
-            $select_product = $conn->prepare("SELECT * FROM `products` WHERE id = ? LIMIT 1");
+            $select_product = $conn->prepare("SELECT * FROM `product` WHERE id = ? LIMIT 1");
             $select_product->execute([$fetch_order['product_id']]);
             if($select_product->rowCount() > 0){
                while($fetch_product = $select_product->fetch(PDO::FETCH_ASSOC)){
