@@ -56,7 +56,7 @@ if(isset($_POST['add_to_cart'])){
 </head>
 <body>
    
-<?php include 'components/userheader.php'; ?>
+<?php include 'components/header.php'; ?>
 
 <section class="products">
 
@@ -78,8 +78,7 @@ if(isset($_POST['add_to_cart'])){
          <p class="price"><i class="fas fa-indian-rupee-sign"></i><?= $fetch_prodcut['price'] ?></p>
          <input type="number" name="qty" required min="1" value="1" max="99" maxlength="2" class="qty">
       </div>
-      <input type="submit" name="add_to_cart" value="add to cart" class="btn">
-      <a href="checkout.php?get_id=<?= $fetch_prodcut['id']; ?>" class="delete-btn">buy now</a>
+      <input type="submit" value="delete" name="delete_item" class="delete-btn" onclick="return confirm('delete this item?');">
    </form>
    <?php
       }

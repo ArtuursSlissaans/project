@@ -34,7 +34,7 @@ if(!isset($_SESSION['user_name'])){
    <div class="box-container">
 
    <?php 
-      $select_products = $conn->prepare("SELECT * FROM `product`");
+      $select_products = $conn->prepare("SELECT * FROM `products`");
       $select_products->execute();
       if($select_products->rowCount() > 0){
          while($fetch_prodcut = $select_products->fetch(PDO::FETCH_ASSOC)){

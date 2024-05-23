@@ -632,3 +632,11 @@ section{
    }
 
 }
+
+h6{
+   color:#fafafa;
+   font-size: 1.4rem;
+   font-weight: 600;
+   letter-spacing: 2px;
+   padding: 3rem 0;
+}

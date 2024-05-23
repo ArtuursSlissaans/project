@@ -2,11 +2,7 @@
 
 include 'components/connect.php';
 
-if(isset($_COOKIE['user_id'])){
-   $user_id = $_COOKIE['user_id'];
-}else{
-   setcookie('user_id', create_unique_id(), time() + 60*60*24*30);
-}
+
 
 if(isset($_POST['add'])){
 
@@ -48,11 +44,10 @@ if(isset($_POST['add'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    
-<?php include 'components/userheader.php'; ?>
+<?php include 'components/header.php'; ?>
 
 <section class="product-form">
 
