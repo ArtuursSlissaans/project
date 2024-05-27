@@ -7,7 +7,7 @@
 :root {
     --font-heading: crimson;
     --para-font: #777777;
-    --black: #222222;
+    --black: #694612;
     --bg: rgba(237, 28, 70);
     --white: #fff;
 }
@@ -104,14 +104,16 @@ nav #close {
 }
 
 .header .content h3 {
-    font-size: 1.4rem;
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 2px;
     padding: 3rem 0;
 }
 
 .header .content h1 {
-    font-size: 5rem;
+    text-align: center;
+    font-size: 4rem;
     letter-spacing: 2px;
 }
 
@@ -672,4 +674,17 @@ nav #close {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.images{
+    flex-basis: 50%;
+    background-size: cover;
+    background: url(img/coffeShop2.jpg);
+    padding: 16rem 0;
+    border-radius: 30px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgb(195, 193, 193);
 }

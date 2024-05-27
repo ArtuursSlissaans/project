@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-   --main-color:#b58941;
+   --main-color:#ca620d;
    --red:#592a26;
    --orange:#f39c12;
    --light-color:#666;
@@ -46,8 +45,11 @@ html{
 }
 
 body{
-   background: #6F4e37;
-   /* padding-bottom: 8rem; */
+    width: fixed;
+    height: fixed;
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section{
@@ -60,7 +62,7 @@ section{
    text-align: center;
    padding-bottom: 2.5rem;
    font-size: 3rem;
-   color: var(--black);
+   color: var(--light-bg);
    text-transform: capitalize;
 }
 
@@ -109,7 +111,7 @@ section{
    top: 0; left: 0; right: 0;
    z-index: 1000;
    box-shadow: var(--box-shodow);
-   background-color: var(--black);
+   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header .flex{
