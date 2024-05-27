@@ -121,7 +121,7 @@ if(isset($_POST['empty_cart'])){
 
    <?php if($grand_total != 0){ ?>
       <div class="cart-total">
-         <p>grand total : <span><i class="fas fa-indian-rupee-sign"></i> <?= $grand_total; ?></span></p>
+         <p>Grand Total : <span><i class="fas fa-indian-rupee-sign"></i> <?= $grand_total; ?></span></p>
          <a href="checkout.php" class="btn">proceed to checkout</a>
          <form action="" method="POST">
           <input type="submit" value="empty cart" name="empty_cart" class="delete-btn" onclick="return confirm('empty your cart?');">
