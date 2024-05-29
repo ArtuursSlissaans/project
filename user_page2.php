@@ -2,7 +2,7 @@
 
 @include 'config.php';
 include('components/question_header.php');
-session_start();
+
 
 
 
@@ -32,16 +32,25 @@ if(!isset($_SESSION['user_name'])){
    <h1 class="heading">Lets get to know what you like & dislike</h1>
 
    <div class="Card1">
-   <h1 class="CardText">Do you prefere Stronger Coffee in your free time?</h1>
-   <a href="user_page2.php" class="Cardbtn1">Chose</a>
+   <h1 class="CardText">Are You The Coffee Convenience Lover?
+  "Someone who drinks coffee for its convenient effects"
+   </h1>
+   <a href="product_page_2.php" class="Cardbtn1">Chose</a>
    </div>
 
    <div class="Card2">
-   <h1 class="CardText">Do you prefere Sweater Coffee in your free time?</h1>
-   <a href="user_page3.php" class="Cardbtn">Chose</a>
+   <h1 class="CardText">Are You The Habitual Drinker
+    "Someone who drinks coffee out of habit rather than necessity or preference for conveniences."
+   </h1>
+   <a href="product_page_2_2.php" class="Cardbtn">Chose</a>
    </div>
 
 </section>
+
+
+
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

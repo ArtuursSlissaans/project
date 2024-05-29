@@ -1,6 +1,6 @@
 
 :root{
-   --main-color:#ca620d;
+   --main-color:#000000d7;
    --red:#592a26;
    --orange:#f39c12;
    --light-color:#666;
@@ -643,3 +643,60 @@ h6{
    letter-spacing: 2px;
    padding: 3rem 0;
 }
+
+.Card1 {
+   text-align: center;
+   margin-top: 300px;
+   width: 290px;
+   height: 254px;
+   border-radius: 50px;
+   background: rgba(237, 187, 153, 0.6);
+   box-shadow: 15px 15px 30px rgb(25, 25, 25),
+               -15px -15px 30px rgb(60, 60, 60);
+  }
+
+  .Card2 {
+   text-align: center;
+   margin-top: -250px;
+   margin-left: 750px;
+   width: 290px;
+   height: 254px;
+   border-radius: 50px;
+   background: rgba(237, 187, 153, 0.6);
+   box-shadow: 15px 15px 30px rgb(25, 25, 25),
+               -15px -15px 30px rgb(60, 60, 60);
+  }
+  
+  .CardText {
+   color:#000000;
+   font-size: 1.4rem;
+   font-weight: 600;
+   letter-spacing: 2px;
+   padding: 3rem 0;
+  }
+
+  .Cardbtn1 {
+   display: block;
+   text-align: center;
+   width: 100%;
+   margin-top: 7rem;
+   padding: 1rem 3rem;
+   color: var(--white);
+   cursor: pointer;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+   border-radius: .5rem;
+  }
+
+  .Cardbtn {
+   display: block;
+   text-align: center;
+   width: 100%;
+   margin-top: 7rem;
+   padding: 1rem 3rem;
+   color: var(--white);
+   cursor: pointer;
+   font-size: 1.8rem;
+   text-transform: capitalize;
+   border-radius: .5rem;
+  }

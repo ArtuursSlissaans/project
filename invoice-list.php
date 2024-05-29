@@ -1,0 +1,83 @@
+<?php
+
+include('components/header.php');
+include('header.php');
+include('functions.php');
+
+?>
+
+<h1>Invoice List</h1>
+<hr>
+
+<div class="row">
+
+	<div class="col-xs-12">
+
+		<div id="response" class="alert alert-success" style="display:none;">
+			<a href="#" class="close" data-dismiss="alert">&times;</a>
+			<div class="alert-success">Email has been sent!</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Manage Invoices</h4>
+			</div>
+			<div class="panel-body form-group form-group-sm">
+				<?php getInvoices(); ?>
+			</div>
+		</div>
+	</div>
+<div>
+
+<div id="delete_invoice" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Delete Invoice</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this invoice?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-primary" id="delete">Delete</button>
+		<button type="button" data-dismiss="modal" class="btn">Cancel</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<?php
+	include('footer.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Orders</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="InvoiceMG-PHP/css/AdminLTE.css">
+   <link rel="stylesheet" href="InvoiceMG-PHP/css/bootstrap.css">
+   <link rel="stylesheet" href="InvoiceMg-PHP/css/styles.css">
+
+
+   <script src="js/js/app.js"></script>
+		<script src="js/js/app.min.js"></script>
+		<script src="js/js/bootstrap.datetime.js"></script>
+		<script src="js/js/bootstrap.js"></script>
+		<script src="js/js/bootstrap.min.js"></script>
+		<script src="js/js/moment.js"></script>
+		<script src="js/js/npm.js"></script>
+		<script src="js/js/scripts.js"></script>
+
+</head>
+<body>
+
+
+</html>
