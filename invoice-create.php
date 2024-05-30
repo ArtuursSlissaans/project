@@ -207,46 +207,8 @@ include('functions.php');
 
 				
 				<div class="col-xs-6 no-padding-right">
-					<div class="row">
-						<div class="col-xs-4 col-xs-offset-5">
-							<strong>Sub Total:</strong>
-						</div>
-						<div class="col-xs-3">
-							<?php echo CURRENCY ?><span class="invoice-sub-total">0.00</span>
-							<input type="hidden" name="invoice_subtotal" id="invoice_subtotal">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4 col-xs-offset-5">
-							<strong>Discount:</strong>
-						</div>
-						<div class="col-xs-3">
-							<?php echo CURRENCY ?><span class="invoice-discount">0.00</span>
-							<input type="hidden" name="invoice_discount" id="invoice_discount">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4 col-xs-offset-5">
-							<strong class="shipping">Shipping:</strong>
-						</div>
-						<div class="col-xs-3">
-							<div class="input-group input-group-sm">
-								<span class="input-group-addon"><?php echo CURRENCY ?></span>
-								<input type="text" class="form-control calculate shipping" name="invoice_shipping" aria-describedby="sizing-addon1" placeholder="0.00">
-							</div>
-						</div>
-					</div>
-					<?php if (ENABLE_VAT == true) { ?>
-					<div class="row">
-						<div class="col-xs-4 col-xs-offset-5">
-							<strong>TAX/VAT:</strong><br>Remove TAX/VAT <input type="checkbox" class="remove_vat">
-						</div>
-						<div class="col-xs-3">
-							<?php echo CURRENCY ?><span class="invoice-vat" data-enable-vat="<?php echo ENABLE_VAT ?>" data-vat-rate="<?php echo VAT_RATE ?>" data-vat-method="<?php echo VAT_INCLUDED ?>">0.00</span>
-							<input type="hidden" name="invoice_vat" id="invoice_vat">
-						</div>
-					</div>
-					<?php } ?>
+					
+
 					<div class="row">
 						<div class="col-xs-4 col-xs-offset-5">
 							<strong>Total:</strong>

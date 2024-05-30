@@ -1083,7 +1083,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: rgb(2, 1, 1);
+  color: rgb(250, 248, 248);
   background-color: #fff;
 }
 input,
@@ -2300,10 +2300,12 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
+  background-color: rgba(237, 187, 153, 0.829);
   border: 1px solid #ddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
+  background-color: rgba(237, 187, 153, 0.6);
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -5300,7 +5302,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: rgba(237, 187, 153, 0.6);
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
@@ -5530,11 +5532,11 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid #ddd;
 }
 .panel-default {
-  border-color: #ddd;
+  border-color: #dd9e158f;
 }
 .panel-default > .panel-heading {
   color: #333;
-  background-color: #f5f5f5;
+  background-color:rgba(237, 187, 153, 0.6);
   border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
