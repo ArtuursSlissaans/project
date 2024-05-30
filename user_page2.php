@@ -6,9 +6,6 @@ include('components/question_header.php');
 
 
 
-if(!isset($_SESSION['user_name'])){
-   header('location:login_form.php');
-}
 
 ?>
 
