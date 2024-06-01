@@ -20,11 +20,17 @@ if(isset($_POST['add'])){
    $image_size = $_FILES['image']['size'];
    $image_folder = 'uploaded_files/'.$rename;
 
+   $country = $_POST['country'];
+   $country = filter_var($country, FILTER_SANITIZE_STRING);
+
+   $type = $_POST['type'];
+   $type = filter_var($type, FILTER_SANITIZE_STRING);
+
    if($image_size > 2000000){
       $warning_msg[] = 'Image size is too large!';
    }else{
-      $add_product = $conn->prepare("INSERT INTO `product`(id, name, price, image) VALUES(?,?,?,?)");
-      $add_product->execute([$id, $name, $price, $rename, ]);
+      $add_product = $conn->prepare("INSERT INTO `product`(id, name, price, image, country, type) VALUES(?,?,?,?,?,?)");
+      $add_product->execute([$id, $name, $price, $rename, $country, $type ]);
       move_uploaded_file($image_tmp_name, $image_folder);
       $success_msg[] = 'Product added!';
    }
@@ -59,6 +65,9 @@ if(isset($_POST['add'])){
       <input type="number" name="price" placeholder="enter product price" required min="0" max="9999999999" maxlength="10" class="box">
       <p>product image <span>*</span></p>
       <input type="file" name="image" required accept="image/*" class="box">
+
+      <p>product's country <span>*</span></p>
+      <input type="text" name="country" placeholder="enter product's country" required maxlength="50" class="box">
 
       <p>product type <span>*</span></p>
       <input type="text" name="type" placeholder="enter product type" required maxlength="50" class="box">

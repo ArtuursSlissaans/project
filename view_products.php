@@ -74,6 +74,8 @@ if(isset($_POST['add_to_cart'])){
       <img src="uploaded_files/<?= $fetch_prodcut['image']; ?>" class="image" alt="">
       <h3 class="name"><?= $fetch_prodcut['name'] ?></h3>
       <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
+      <h3 class="country"><?= $fetch_prodcut['country'] ?></h3>
+      <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
       <div class="flex">
          <p class="price"><i class="fas fa-indian-rupee-sign"></i><?= $fetch_prodcut['price'] ?></p>
          <input type="number" name="qty" required min="1" value="1" max="99" maxlength="2" class="qty">
