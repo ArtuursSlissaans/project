@@ -50,6 +50,9 @@ if(isset($_POST['add_to_cart'])){
    <title>View Products</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="css/style.css">
 
@@ -61,6 +64,13 @@ if(isset($_POST['add_to_cart'])){
 <section class="products">
 
    <h1 class="heading">all products</h1>
+
+
+   <div class="search">
+   <input type="text" name="" id="find" placeholder="search for key words here...." onkeyup="search()">
+   </div>
+
+
 
    <div class="box-container">
 
@@ -74,7 +84,7 @@ if(isset($_POST['add_to_cart'])){
       <img src="uploaded_files/<?= $fetch_prodcut['image']; ?>" class="image" alt="">
       <h3 class="name"><?= $fetch_prodcut['name'] ?></h3>
       <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
-      <h3 class="country"><?= $fetch_prodcut['country'] ?></h3>
+      <h1 class="country"><?= $fetch_prodcut['country'] ?></h1>
       <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
       <div class="flex">
          <p class="price"><i class="fas fa-indian-rupee-sign"></i><?= $fetch_prodcut['price'] ?></p>
@@ -94,8 +104,24 @@ if(isset($_POST['add_to_cart'])){
 
 </section>
 
-
-
+<script type="text/javascript">
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.box');
+let l = document.getElementsByTagName('h1');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('h1')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+</script>
 
 
 
@@ -108,3 +134,8 @@ if(isset($_POST['add_to_cart'])){
 
 </body>
 </html>
+
+<style type="text/css">
+*
+
+</style>

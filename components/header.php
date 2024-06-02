@@ -1,7 +1,7 @@
 <header class="header">
 
    <section class="flex">
-      <a href="#" class="logo">Rece Coffe Shop</a>
+      <a href="admin_page.php" class="logo">Rece Coffe Shop</a>
 
       <nav class="navbar">
          <a href="add_product.php">add product</a>
