@@ -3130,6 +3130,7 @@ fieldset[disabled] .btn-primary.active {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
+  width:25px;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3175,6 +3176,7 @@ fieldset[disabled] .btn-success.active {
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
+  width:25px;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3265,6 +3267,7 @@ fieldset[disabled] .btn-warning.active {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
+  width:25px;
 }
 .btn-danger:hover,
 .btn-danger:focus,
