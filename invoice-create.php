@@ -1,4 +1,5 @@
 <?php
+
 include('components/header.php');
 include('header.php');
 include('functions.php');
@@ -167,6 +168,7 @@ include('functions.php');
 					<tr>
 						<td>
 							<div class="form-group form-group-sm  no-margin-bottom">
+
 								<input type="text" class="form-control form-group-sm item-input invoice_product" name="invoice_product[]" placeholder="Enter Product Name OR Description">
 								<p class="item-select">or <a href="#">select a product</a></p>
 							</div>
@@ -197,17 +199,9 @@ include('functions.php');
 				</tbody>
 			</table>
 			<div id="invoice_totals" class="padding-right row text-right">
-				<div class="col-xs-6">
-					<div class="input-group form-group-sm textarea no-margin-bottom">
-						<textarea class-"form-control" name="invoice_notes" placeholder="Additional Notes..."></textarea>
-					</div>
 
-					
-				</div>
 
 				
-				<div class="col-xs-6 no-padding-right">
-					
 
 					<div class="row">
 						<div class="col-xs-4 col-xs-offset-5">
@@ -221,12 +215,9 @@ include('functions.php');
 				</div>
 
 		
-					<div class="col-xs-6">
-						<input type="email" name="custom_email" id="custom_email" class="custom_email_textarea" placeholder="Enter custom email if you wish to override the default invoice type email msg!"></input>
-					</div>
 
 					<div class="col-xs-6 margin-top btn-group">
-						<input type="submit" id="action_create_invoice" class="btn btn-success float-right" value="Done" data-loading-text="Creating...">
+						<input type="submit" id="action_create_invoice" class="btn btn-success float-right" value="Create Invoice" data-loading-text="Creating...">
 					</div>
 			
 
@@ -279,6 +270,7 @@ include('functions.php');
 		<script src="js/js/moment.js"></script>
 		<script src="js/js/npm.js"></script>
 		<script src="js/js/scripts.js"></script>
+		
 
 	<link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="InvoiceMG-PHP/css/AdminLTE.css">
