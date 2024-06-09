@@ -98,12 +98,12 @@ if(isset($_POST['empty_cart'])){
       <img src="uploaded_files/<?= $fetch_product['image']; ?>" class="image" alt="">
       <h3 class="name"><?= $fetch_product['name']; ?></h3>
       <div class="flex">
-         <p class="price"><i class="fas fa-indian-rupee-sign"></i> <?= $fetch_cart['price']; ?></p>
+         <p class="price"><i class="a-price-symbol">$</i> <?= $fetch_cart['price']; ?></p>
          <input type="number" name="qty" required min="1" value="<?= $fetch_cart['qty']; ?>" max="99" maxlength="2" class="qty">
          <button type="submit" name="update_cart" class="fas fa-edit">
          </button>
       </div>
-      <p class="sub-total">sub total : <span><i class="fas fa-indian-rupee-sign"></i> <?= $sub_total = ($fetch_cart['qty'] * $fetch_cart['price']); ?></span></p>
+      <p class="sub-total">sub total : <span><i class="a-price-symbol">$</i> <?= $sub_total = ($fetch_cart['qty'] * $fetch_cart['price']); ?></span></p>
       <input type="submit" value="delete" name="delete_item" class="delete-btn" onclick="return confirm('delete this item?');">
    </form>
    <?php
@@ -121,7 +121,7 @@ if(isset($_POST['empty_cart'])){
 
    <?php if($grand_total != 0){ ?>
       <div class="cart-total">
-         <p>Grand Total : <span><i class="fas fa-indian-rupee-sign"></i> <?= $grand_total; ?></span></p>
+         <p>Grand Total : <span><i class="a-price-symbol">$</i> <?= $grand_total; ?></span></p>
          <a href="checkout.php" class="btn">proceed to checkout</a>
          <form action="" method="POST">
           <input type="submit" value="empty cart" name="empty_cart" class="delete-btn" onclick="return confirm('empty your cart?');">

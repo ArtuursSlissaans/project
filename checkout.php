@@ -138,7 +138,7 @@ if(isset($_POST['place_order'])){
             <img src="uploaded_files/<?= $fetch_get['image']; ?>" class="image" alt="">
             <div>
                <h3 class="name"><?= $fetch_get['name']; ?></h3>
-               <p class="price"><i class="fas fa-indian-rupee-sign"></i> <?= $fetch_get['price']; ?> x 1</p>
+               <p class="price"><i class="a-price-symbol">$</i> <?= $fetch_get['price']; ?> x 1</p>
             </div>
          </div>
          <?php
@@ -160,7 +160,7 @@ if(isset($_POST['place_order'])){
             <img src="uploaded_files/<?= $fetch_product['image']; ?>" class="image" alt="">
             <div>
                <h3 class="name"><?= $fetch_product['name']; ?></h3>
-               <p class="price"><i class="fas fa-indian-rupee-sign"></i> <?= $fetch_product['price']; ?> x <?= $fetch_cart['qty']; ?></p>
+               <p class="price"><i class="a-price-symbol">$</i> <?= $fetch_product['price']; ?> x <?= $fetch_cart['qty']; ?></p>
             </div>
          </div>
          <?php
@@ -170,7 +170,7 @@ if(isset($_POST['place_order'])){
                }
             }
          ?>
-         <div class="grand-total"><span>grand total :</span><p><i class="fas fa-indian-rupee-sign"></i> <?= $grand_total; ?></p></div>
+         <div class="grand-total"><span>grand total :</span><p><i class="a-price-symbol">$</i> <?= $grand_total; ?></p></div>
       </div>
 
    </div>

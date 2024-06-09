@@ -73,7 +73,7 @@ if(isset($_POST['delete_item'])){
       <h1 class="country"><?= $fetch_prodcut['country'] ?></h1>
       <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
       <div class="flex">
-         <p class="price"><i class="fas fa-indian-rupee-sign"></i><?= $fetch_prodcut['price'] ?></p>
+         <p class="price"><i class="a-price-symbol">$</i><?= $fetch_prodcut['price'] ?></p>
          <input type="number" name="qty" required min="1" value="1" max="99" maxlength="2" class="qty">
       </div>
       <input type="submit" value="delete" name="delete_item" class="delete-btn" onclick="return confirm('delete this item?');">
