@@ -77,7 +77,7 @@ if(isset($_POST['add_to_cart'])){
       <input type="hidden" name="product_id" value="<?= $fetch_prodcut['id']; ?>">
       <div class="flex">
          <p class="price"><i class="a-price-symbol">$</i><?= $fetch_prodcut['price'] ?></p>
-         <input type="number" name="qty" required min="1" value="1" max="99" maxlength="2" class="qty">
+         <p class="name"><i class="text">250g</i></p>
       </div>
       <input type="submit" name="add_to_cart" value="add to cart" class="btn">
       <a href="checkout.php?get_id=<?= $fetch_prodcut['id']; ?>" class="delete-btn">buy now</a>

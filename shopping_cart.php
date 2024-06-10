@@ -97,6 +97,7 @@ if(isset($_POST['empty_cart'])){
       <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
       <img src="uploaded_files/<?= $fetch_product['image']; ?>" class="image" alt="">
       <h3 class="name"><?= $fetch_product['name']; ?></h3>
+      <p class="name"><i class="text">250g</i></p>
       <div class="flex">
          <p class="price"><i class="a-price-symbol">$</i> <?= $fetch_cart['price']; ?></p>
          <input type="number" name="qty" required min="1" value="<?= $fetch_cart['qty']; ?>" max="99" maxlength="2" class="qty">

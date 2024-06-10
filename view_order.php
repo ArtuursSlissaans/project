@@ -67,6 +67,7 @@ if(isset($_POST['cancel'])){
          <img src="uploaded_files/<?= $fetch_product['image']; ?>" class="image" alt="">
          <p class="price"><i class="a-price-symbol">$</i> <?= $fetch_order['price']; ?> x <?= $fetch_order['qty']; ?></p>
          <h3 class="name"><?= $fetch_product['name']; ?></h3>
+         <p class="name"><i class="text">250g</i></p>
          <p class="grand-total">grand total : <span><i class="a-price-symbol">$</i> <?= $grand_total; ?></span></p>
       </div>
       <div class="col">
