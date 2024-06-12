@@ -86,10 +86,10 @@ function getInvoices() {
 // Initial invoice number
 function getInvoiceId() {
 
-	// Connect to the database
+
 	$mysqli = new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
 
-	// output any connection error
+
 	if ($mysqli->connect_error) {
 	    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
@@ -102,7 +102,7 @@ function getInvoiceId() {
 
 	    $row = mysqli_fetch_assoc($result);
 
-	    //var_dump($row);
+
 
 	    if($row_cnt == 0){
 			echo INVOICE_INITIAL_VALUE;
@@ -110,10 +110,10 @@ function getInvoiceId() {
 			echo $row['invoice'] + 1; 
 		}
 
-	    // Frees the memory associated with a result
+
 		$result->free();
 
-		// close connection 
+
 		$mysqli->close();
 	}
 	
@@ -122,18 +122,18 @@ function getInvoiceId() {
 // populate product dropdown for invoice creation
 function popProductsList() {
 
-	// Connect to the database
+
 	$mysqli = new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
 
-	// output any connection error
+
 	if ($mysqli->connect_error) {
 	    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
 
-	// the query
+
 	$query = "SELECT * FROM products ORDER BY product_name ASC";
 
-	// mysqli select query
+
 	$results = $mysqli->query($query);
 
 	if($results) {
@@ -150,10 +150,10 @@ function popProductsList() {
 
 	}
 
-	// Frees the memory associated with a result
+
 	$results->free();
 
-	// close connection 
+
 	$mysqli->close();
 
 }
@@ -161,18 +161,18 @@ function popProductsList() {
 // populate product dropdown for invoice creation
 function popCustomersList() {
 
-	// Connect to the database
+
 	$mysqli = new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
 
-	// output any connection error
+
 	if ($mysqli->connect_error) {
 	    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
 
-	// the query
+
 	$query = "SELECT * FROM store_customers ORDER BY name ASC";
 
-	// mysqli select query
+
 	$results = $mysqli->query($query);
 
 	if($results) {
@@ -206,10 +206,10 @@ function popCustomersList() {
 
 	}
 
-	// Frees the memory associated with a result
+
 	$results->free();
 
-	// close connection 
+
 	$mysqli->close();
 
 }
@@ -329,18 +329,18 @@ function getUsers() {
 // get user list
 function getCustomers() {
 
-	// Connect to the database
+
 	$mysqli = new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
 
-	// output any connection error
+
 	if ($mysqli->connect_error) {
 	    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
 
-	// the query
+
 	$query = "SELECT * FROM store_customers ORDER BY name ASC";
 
-	// mysqli select query
+
 	$results = $mysqli->query($query);
 
 	if($results) {
@@ -374,10 +374,10 @@ function getCustomers() {
 
 	}
 
-	// Frees the memory associated with a result
+
 	$results->free();
 
-	// close connection 
+
 	$mysqli->close();
 }
 
